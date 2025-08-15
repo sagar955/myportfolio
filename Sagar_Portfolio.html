@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      background: linear-gradient(to right, #e0eafc, #cfdef3);
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background: url('https://wallpaperaccess.com/full/5651990.jpg') no-repeat center center/cover;
+      color: #fff;
+      padding: 60px 20px;
+      text-align: center;
+      animation: fadeIn 2s ease-in-out;
+    }
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+      animation: slideDown 1s ease-in-out;
+    }
+    header p {
+      font-size: 1.2rem;
+      color: #f0f0f0;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+      animation: slideUp 1.5s ease-in-out;
+    }
+    .container {
+      max-width: 1100px;
+      margin: 50px auto;
+      padding: 0 20px;
+      animation: zoomIn 1s ease forwards;
+    }
+    section {
+      margin-bottom: 50px;
+    }
+    h2 {
+      color: #2c3e50;
+      margin-bottom: 20px;
+      font-size: 2rem;
+      border-left: 5px solid #2980b9;
+      padding-left: 10px;
+      position: relative;
+      animation: fadeInLeft 1s ease-in-out;
+    }
+    h2::after {
+      content: "";
+      position: absolute;
+      bottom: -5px;
+      left: 10px;
+      width: 60px;
+      height: 3px;
+      background: #2980b9;
+    }
+    .card {
+      background: #fff;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      margin-bottom: 25px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: fadeInUp 1s ease forwards;
+      opacity: 0;
+    }
+    .card:hover {
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    ul li::before {
+      content: "\f058";
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900;
+      color: #2980b9;
+      margin-right: 10px;
+    }
+    footer {
+      text-align: center;
+      background: #2c3e50;
+      color: #fff;
+      padding: 25px 0;
+      margin-top: 50px;
+      animation: fadeIn 2s ease-in-out;
+    }
+    .contact a {
+      color: #2980b9;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    .contact a:hover {
+      text-decoration: underline;
+      color: #1a5276;
+    }
+    .profile-pic {
+      display: block;
+      margin: 0 auto 20px;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      animation: zoomIn 1s ease-in-out;
+    }
+    @media screen and (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      h2 {
+        font-size: 1.5rem;
+      }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes slideDown {
+      from { transform: translateY(-50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    @keyframes slideUp {
+      from { transform: translateY(50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    @keyframes zoomIn {
+      from { transform: scale(0.8); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+    @keyframes fadeInLeft {
+      from { opacity: 0; transform: translateX(-30px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="C:\Users\Sagar Kumar\Downloads\profile.jpg.jpeg" alt="Profile Picture" class="profile-pic">
+    <h1>Sagar Kumar</h1>
+    <p>Diploma Holder | Web Developer | Tech Enthusiast</p>
+  </header>
+
+  <div class="container">
+    <section>
+      <h2><i class="fas fa-user"></i> About Me</h2>
+      <div class="card">
+        <p>I am a diploma holder in Computer Engineering with a passion for creating modern and user-friendly websites. I enjoy learning new technologies and building creative web applications. I aim to contribute to real-world projects and continuously improve my skills.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+      <div class="card">
+        <p><strong>Diploma in Computer Engineering</strong></p>
+        <p>JSPM Polytechnic College (2023 - 2026)</p>
+      </div>
+    </section>
+
+    <section>
+      <h2><i class="fas fa-code"></i> Skills</h2>
+      <div class="card">
+        <ul>
+          <li>HTML, CSS</li>
+          <li>C, C++</li>
+          <li>Python, Java </li>
+          <li>Git & GitHub</li>
+          <li>Problem Solving</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2><i class="fas fa-laptop-code"></i> Projects</h2>
+      <div class="card">
+        <p><strong>Portfolio Website</strong><br> A personal website built with HTML, CSS showcasing my profile, skills, and projects in a professional layout.</p>
+        <p><strong>Site Hosting</strong><br> A personal website built with HTML, CSS showcasing my profile, skills, that website or webpage hosted by me.</p>
+        <p><strong>ATM Machine</strong><br> A java Project that works on an ATM machine algorithm, including all the operations performed on an ATM machine.</p>
+        <p><strong>Ecom, Food Website</strong><br> A personal Ecommerce and Food oriented website built with HTML, CSS.
+      </div>
+    </section>
+
+    <section class="contact">
+      <h2><i class="fas fa-envelope"></i> Contact Me</h2>
+      <div class="card">
+        <p><i class="fas fa-envelope"></i> Email: <a href="sagar914256@gmail.com">sagar914256@gmail.com</a></p>
+        <p><i class="fab fa-linkedin"></i> LinkedIn: <a href="https://linkedin.com/in/sagar" target="_blank">linkedin.com/in/sagar</a></p>
+        <p><i class="fab fa-github"></i> GitHub: <a href="https://github.com/sagar955" target="_blank">github.com/sagar955</a></p>
+        <p><i class="fab fa-instagram"></i> Instagram: <a href="https://www.instagram.com/sagar_ji8469?igsh=dHkzamo3bXF1bjdv" target="_blank">instagram.com/sagar_ji</a></p>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Sagar Kumar. All rights reserved.</p>
+  </footer>
+</body>
+</html>
